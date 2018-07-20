@@ -1,0 +1,25 @@
+#!/bin/bash -l 
+
+#PBS -A Fulab
+
+#PBS -q default
+
+#PBS -N SA_repeated_runs
+
+#PBS -M tevans1080@gmail.com
+#PBS -m abe
+
+#PBS -l nodes=1:ppn=16
+
+#PBS -l walltime=480:00:00
+
+#### load matlab module
+module load matlab
+
+cd $PBS_O_WORKDIR
+
+#### run MATLAB
+matlab -nodisplay -nosplash -r SA_Repeated_Runs
+
+
+
